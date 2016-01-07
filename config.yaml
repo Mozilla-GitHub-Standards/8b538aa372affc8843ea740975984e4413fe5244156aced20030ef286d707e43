@@ -1,0 +1,3 @@
+bucket: switchboard-experiments
+upload: true
+experiments_filename: experiments.json
