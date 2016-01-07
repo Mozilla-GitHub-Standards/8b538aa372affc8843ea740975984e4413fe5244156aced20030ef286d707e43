@@ -27,6 +27,7 @@ def main():
     if not y.get("upload"):
       sys.exit("No value for 'upload' in config %s" % config_filename)
 
+    # done with config file after parsing
     config_file.close()
 
     bucket = y.get("bucket")
@@ -42,7 +43,9 @@ def main():
       sys.exit("Could not read experiments file: %s" % experiments_filename)
 
     with experiments_file:
+      # save experiments text in string
       experiments = experiments_file.read()
+      experiments_file.close()
 
       # check for valid json
       try:
@@ -59,6 +62,7 @@ def main():
       k.key = experiments_filename
       k.set_contents_from_string(experiments)
 
+      # success
       print "Uploaded %s s3" % experiments_filename
 
 if __name__ == "__main__":
