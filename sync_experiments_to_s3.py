@@ -47,6 +47,8 @@ def main():
       experiments = experiments_file.read()
       experiments_file.close()
 
+      print "*** %s file contents ***\n%s" % experiments_filename, experiments
+
       # check for valid json
       try:
         j = json.loads(experiments)
@@ -63,7 +65,7 @@ def main():
       k.set_contents_from_string(experiments)
 
       # success
-      print "Uploaded %s s3" % experiments_filename
+      print "Uploaded %s to s3" % experiments_filename
 
 if __name__ == "__main__":
   main()
