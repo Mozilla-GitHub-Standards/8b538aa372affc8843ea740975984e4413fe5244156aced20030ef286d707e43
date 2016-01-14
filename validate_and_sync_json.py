@@ -47,13 +47,13 @@ def get_config(config_filename):
     config_file.close()
 
     # check for value existence
-    if not y.get("experiments_filename"):
+    if "experiments_filename" not in y:
         sys.exit("No value for 'experiments_filename' in config {0}".format(
             config_filename))
-    if not y.get("bucket"):
+    if "bucket" not in y:
         sys.exit("No value for 'bucket' in config {0}".format(
             config_filename))
-    if not y.get("upload"):
+    if "upload" not in y:
         sys.exit("No value for 'upload' in config {0}".format(
             config_filename))
 
