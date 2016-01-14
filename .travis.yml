@@ -4,4 +4,5 @@ python:
 before_install:
   - git clone https://github.com/mozilla-services/switchboard-experiments
 install: true
-script: travis.sh
+script:
+  - ./travis.sh
