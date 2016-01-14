@@ -1,0 +1,7 @@
+language: python
+python:
+  - "2.6"
+  - "2.7"
+before_install:
+  - git clone https://github.com/mozilla-services/switchboard-experiments
+script: validate_and_sync_json.py travis_config.yaml
