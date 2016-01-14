@@ -94,5 +94,7 @@ def main():
     # success
     print "Uploaded {0} to s3".format(experiments_filename)
 
+    return 0
+
 if __name__ == "__main__":
     main()
