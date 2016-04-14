@@ -1,3 +1,3 @@
-bucket: switchboard-experiments-stage
+bucket: switchboard-experiments-dev
 experiments_filename: experiments.json
 upload: true
